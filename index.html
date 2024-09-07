@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css flex & float</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            height: 400px;
+            width: 500px;
+            display: flex;
+            gap: 10px;
+            background-color: #76b4e9;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            /* background-color: blue; */
+            gap: 10px;
+
+        }
+
+        .left {
+            float: left;
+            height: 100%;
+            background-color: green;
+            width: 120px;
+        }
+
+        .top {
+            height: 120px;
+
+            background-color: maroon;
+        }
+
+        .bottom {
+            /* background-color: red; */
+            height: calc(100% - 130px);
+            display: flex;
+            gap: 10px;
+
+        }
+
+        .children-box {
+            background-color: #76b4e9;
+            flex-grow: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .children {
+            flex-grow: 0.5;
+            height: 100%;           
+            background-color: rebeccapurple;
+        }
+        .ch-box{
+            display: flex;
+            width: 100%;
+            height: calc(50% - 5px);
+            gap: 10px;
+        }
+
+        .right-float {
+            float: right;
+            background-color: darkblue;
+            width: 120px;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left"></div>
+        <div class="right">
+            <div class="top"></div>
+            <div class="bottom">
+                <div class="children-box">
+                    <div class="ch-box">
+                        <div class="children"></div>
+                        <div class="children"></div>
+                    </div>
+                    <div class="ch-box">
+                        <div class="children"></div>
+                        <div class="children"></div>
+                    </div>
+
+                </div>
+                <div class="right-float"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
